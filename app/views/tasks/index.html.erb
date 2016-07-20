@@ -1,0 +1,32 @@
+<main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp mdl-cell--12-col">
+                  <thead>
+                    <tr>
+                      <th class="mdl-data-table__cell--non-numeric">Task</th>
+                      <th>Started On</th>
+                      <th>Open for</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <% @tasks.all.each do |task| %>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric"><%= task.task %></td>
+                    <td><%= task.started_on.strftime("%b %dth %I:%M %p") %></td>
+                    <td><%= distance_of_time_in_words_to_now(task.started_on) %></td>
+                    <td><%= link_to 'mark as finished',edit_task_path(task) %></td>
+                  </tr>
+                  <% end %>
+                  <% if @tasks.size == 0 %>
+                  <tr>
+                    <td colspan = '4'><em>No tasks found</em></td>
+                  </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+</main>

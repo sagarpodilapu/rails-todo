@@ -1,0 +1,17 @@
+<div class="mdl-layout__tab-panel">
+  <section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h3>Add new task</h3>
+      <%= form_for @tasks do |f| %>
+        <%= f.hidden_field :user_id,:value => current_user.id %><span class="highlight"></span><span class="bar"></span>
+      <div class="group">
+        <%= f.text_field :task %><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :task %>
+      </div>
+        <%= f.submit "Add Task",class: "button buttonBlue" %>
+
+      <% end %>
+
+    </div>
+  </section>
+</div>

@@ -1,0 +1,20 @@
+<div class="mdl-layout__tab-panel">
+  <section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h3>Login</h3>
+      <%= form_for(:session, url: login_path) do |f| %>
+      <div class="group">
+        <%= f.text_field :username, :autocomplete => :off %><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :username %>
+      </div>
+      <div class="group">
+        <%= f.password_field :password,  :autocomplete => :off%><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :password %>
+      </div>
+        <%= f.submit "Log in",class: "button buttonBlue" %>
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      <% end %>
+
+    </div>
+  </section>
+</div>

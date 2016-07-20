@@ -1,0 +1,27 @@
+<div class="mdl-layout__tab-panel">
+  <section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+    <h3>Sign up</h3>
+    <%= form_for(@user, url: signup_path) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <div class="group">
+        <%= f.text_field :username %><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :username %>
+      </div>
+      <div class="group">
+        <%= f.password_field :password %><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :password %>
+      </div>
+      <div class="group">
+        <%= f.password_field :password_confirmation %><span class="highlight"></span><span class="bar"></span>
+        <%= f.label :password_confirmation,"Confirmation" %>
+      </div>
+
+      <%= f.submit "Create my account", class: "button buttonBlue" %>
+      <p><%= link_to "Login ?", login_path %></p>
+    <% end %>
+
+
+    </div>
+  </section>
+</div>
