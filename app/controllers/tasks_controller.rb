@@ -4,7 +4,11 @@ class TasksController < ApplicationController
 
   def index
     # show all tasks
-    @tasks = Task.where("ended_on < started_on AND user_id = ?",current_user.id).order("started_on DESC");
+    if logged_in?
+      @tasks = Task.where("ended_on < started_on AND user_id = ?",current_user.id).order("started_on DESC");
+    else
+      redirect_to login_path
+    end
   end
 
   def show
