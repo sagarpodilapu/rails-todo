@@ -23,6 +23,16 @@
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
         <%= csrf_meta_tags %>
+        <% if content_for?(:meta_og) %>
+            <%= yield :meta_og %>
+        <% else %>
+            <meta property="og:title" content="Get shit done" />
+            <meta property="og:type" content="website" />
+            <%= tag :meta, property: 'og:author', content: "@sagarpodilapu" %>
+            <%= tag :meta, property: 'og:description', content: "Now or Never.None or One. Decide what to do and when to do" %>
+            <%= tag :meta, property: 'og:url', content: "https://sagar-todo.herokuapp.com" %>
+            <%= tag :meta, property: 'og:image', content: image_url('todo.jpg') %>
+        <% end %>
       </head>
       <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
