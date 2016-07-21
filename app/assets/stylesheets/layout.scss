@@ -448,3 +448,18 @@ footer img:focus , footer a:focus { outline: none; }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
+.danger{
+  padding: 10px;
+  background: #f8f8f8;
+  color: #df0000;
+  text-align: center;
+  font-weight: bold;
+}
+.form-errors{
+  list-style: none;
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+.form-errors li{
+  color:#df0000;
+}
