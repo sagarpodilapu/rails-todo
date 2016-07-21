@@ -1,0 +1,16 @@
+// Place all the styles related to the dead controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.whatsapp-png{
+
+}
+.help-ul{
+  list-style:none;
+  font-size: 14pt;
+}
+.help-ul li{
+  background-image: url('star-circle.png');
+  background-repeat: no-repeat;
+  line-height: 30px;
+  padding-left: 30px;
+}

@@ -1,0 +1,2 @@
+module DeadHelper
+end

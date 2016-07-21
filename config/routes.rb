@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dead/help',to:'dead#help', as: 'help' 
+
+  get 'dead/about'
+
   get 'sessions/new'
 
   # The priority is based upon order of creation: first created -> highest priority.

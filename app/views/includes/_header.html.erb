@@ -42,7 +42,7 @@
               <%= link_to "Log out", logout_path, method: :delete,class: 'mdl-layout__tab' %>
               <% else %>
               <%= link_to "Login", login_path(),class: (current_page?(login_path) ? 'mdl-layout__tab is-active': 'mdl-layout__tab') %>
-              <a href="#support" class="mdl-layout__tab">Support Us</a>
+              <%= link_to "How It works", help_path,class: (current_page?(help_path) ? 'mdl-layout__tab is-active': 'mdl-layout__tab') %>
               <% end %>
               <% if logged_in? %>
               <a href='/tasks/new' class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
